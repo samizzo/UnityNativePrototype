@@ -368,6 +368,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeProjectBootstrap/NativeProjectBootstrap-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -394,6 +395,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeProjectBootstrap/NativeProjectBootstrap-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -473,6 +475,7 @@
 				48C30D3219380EC9009E4206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48C30D3319380EC9009E4206 /* Build configuration list for PBXNativeTarget "NativeProjectBootstrapTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +484,7 @@
 				48C30D3519380EC9009E4206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

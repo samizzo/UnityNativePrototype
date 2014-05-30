@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *SwitchToUnity;
+@property (retain, nonatomic) IBOutlet UIButton *SwitchToUnity;
 
 @end

@@ -338,6 +338,7 @@
 		48C30CED1937FD00009E4206 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NativeProjectLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeProjectLib/NativeProjectLib-Prefix.pch";
@@ -350,6 +351,7 @@
 		48C30CEE1937FD00009E4206 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NativeProjectLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeProjectLib/NativeProjectLib-Prefix.pch";

@@ -13,8 +13,8 @@
 
 + (UIViewController*)Create
 {
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-    ViewController* viewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    UIStoryboard* storyboard = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] retain];
+    ViewController* viewController = [[storyboard instantiateViewControllerWithIdentifier:@"ViewController"] retain];
     return viewController;
 }
 

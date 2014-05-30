@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48C30CCD1937FD00009E4206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CCC1937FD00009E4206 /* Foundation.framework */; };
+		48C30CD21937FD00009E4206 /* NativeProjectLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48C30CD11937FD00009E4206 /* NativeProjectLib.h */; };
+		48C30CD41937FD00009E4206 /* NativeProjectLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C30CD31937FD00009E4206 /* NativeProjectLib.m */; };
+		48C30CDB1937FD00009E4206 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CDA1937FD00009E4206 /* XCTest.framework */; };
+		48C30CDC1937FD00009E4206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CCC1937FD00009E4206 /* Foundation.framework */; };
+		48C30CDE1937FD00009E4206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CDD1937FD00009E4206 /* UIKit.framework */; };
+		48C30CE11937FD00009E4206 /* libNativeProjectLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CC91937FD00009E4206 /* libNativeProjectLib.a */; };
+		48C30CE71937FD00009E4206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48C30CE51937FD00009E4206 /* InfoPlist.strings */; };
+		48C30CE91937FD00009E4206 /* NativeProjectLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C30CE81937FD00009E4206 /* NativeProjectLibTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48C30CDF1937FD00009E4206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C30CC11937FD00009E4206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C30CC81937FD00009E4206;
+			remoteInfo = NativeProjectLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48C30CC71937FD00009E4206 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				48C30CD21937FD00009E4206 /* NativeProjectLib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		48C30CC91937FD00009E4206 /* libNativeProjectLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNativeProjectLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C30CCC1937FD00009E4206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		48C30CD01937FD00009E4206 /* NativeProjectLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeProjectLib-Prefix.pch"; sourceTree = "<group>"; };
+		48C30CD11937FD00009E4206 /* NativeProjectLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeProjectLib.h; sourceTree = "<group>"; };
+		48C30CD31937FD00009E4206 /* NativeProjectLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeProjectLib.m; sourceTree = "<group>"; };
+		48C30CD91937FD00009E4206 /* NativeProjectLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeProjectLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C30CDA1937FD00009E4206 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		48C30CDD1937FD00009E4206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		48C30CE41937FD00009E4206 /* NativeProjectLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NativeProjectLibTests-Info.plist"; sourceTree = "<group>"; };
+		48C30CE61937FD00009E4206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48C30CE81937FD00009E4206 /* NativeProjectLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeProjectLibTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48C30CC61937FD00009E4206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C30CCD1937FD00009E4206 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C30CD61937FD00009E4206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C30CE11937FD00009E4206 /* libNativeProjectLib.a in Frameworks */,
+				48C30CDB1937FD00009E4206 /* XCTest.framework in Frameworks */,
+				48C30CDE1937FD00009E4206 /* UIKit.framework in Frameworks */,
+				48C30CDC1937FD00009E4206 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48C30CC01937FD00009E4206 = {
+			isa = PBXGroup;
+			children = (
+				48C30CCE1937FD00009E4206 /* NativeProjectLib */,
+				48C30CE21937FD00009E4206 /* NativeProjectLibTests */,
+				48C30CCB1937FD00009E4206 /* Frameworks */,
+				48C30CCA1937FD00009E4206 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48C30CCA1937FD00009E4206 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48C30CC91937FD00009E4206 /* libNativeProjectLib.a */,
+				48C30CD91937FD00009E4206 /* NativeProjectLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C30CCB1937FD00009E4206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48C30CCC1937FD00009E4206 /* Foundation.framework */,
+				48C30CDA1937FD00009E4206 /* XCTest.framework */,
+				48C30CDD1937FD00009E4206 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48C30CCE1937FD00009E4206 /* NativeProjectLib */ = {
+			isa = PBXGroup;
+			children = (
+				48C30CD11937FD00009E4206 /* NativeProjectLib.h */,
+				48C30CD31937FD00009E4206 /* NativeProjectLib.m */,
+				48C30CCF1937FD00009E4206 /* Supporting Files */,
+			);
+			path = NativeProjectLib;
+			sourceTree = "<group>";
+		};
+		48C30CCF1937FD00009E4206 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48C30CD01937FD00009E4206 /* NativeProjectLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48C30CE21937FD00009E4206 /* NativeProjectLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				48C30CE81937FD00009E4206 /* NativeProjectLibTests.m */,
+				48C30CE31937FD00009E4206 /* Supporting Files */,
+			);
+			path = NativeProjectLibTests;
+			sourceTree = "<group>";
+		};
+		48C30CE31937FD00009E4206 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48C30CE41937FD00009E4206 /* NativeProjectLibTests-Info.plist */,
+				48C30CE51937FD00009E4206 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48C30CC81937FD00009E4206 /* NativeProjectLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30CEC1937FD00009E4206 /* Build configuration list for PBXNativeTarget "NativeProjectLib" */;
+			buildPhases = (
+				48C30CC51937FD00009E4206 /* Sources */,
+				48C30CC61937FD00009E4206 /* Frameworks */,
+				48C30CC71937FD00009E4206 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativeProjectLib;
+			productName = NativeProjectLib;
+			productReference = 48C30CC91937FD00009E4206 /* libNativeProjectLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		48C30CD81937FD00009E4206 /* NativeProjectLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C30CEF1937FD00009E4206 /* Build configuration list for PBXNativeTarget "NativeProjectLibTests" */;
+			buildPhases = (
+				48C30CD51937FD00009E4206 /* Sources */,
+				48C30CD61937FD00009E4206 /* Frameworks */,
+				48C30CD71937FD00009E4206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48C30CE01937FD00009E4206 /* PBXTargetDependency */,
+			);
+			name = NativeProjectLibTests;
+			productName = NativeProjectLibTests;
+			productReference = 48C30CD91937FD00009E4206 /* NativeProjectLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48C30CC11937FD00009E4206 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Fancy Pants Games";
+			};
+			buildConfigurationList = 48C30CC41937FD00009E4206 /* Build configuration list for PBXProject "NativeProjectLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 48C30CC01937FD00009E4206;
+			productRefGroup = 48C30CCA1937FD00009E4206 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48C30CC81937FD00009E4206 /* NativeProjectLib */,
+				48C30CD81937FD00009E4206 /* NativeProjectLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48C30CD71937FD00009E4206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C30CE71937FD00009E4206 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48C30CC51937FD00009E4206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C30CD41937FD00009E4206 /* NativeProjectLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C30CD51937FD00009E4206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C30CE91937FD00009E4206 /* NativeProjectLibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48C30CE01937FD00009E4206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C30CC81937FD00009E4206 /* NativeProjectLib */;
+			targetProxy = 48C30CDF1937FD00009E4206 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48C30CE51937FD00009E4206 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C30CE61937FD00009E4206 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C30CEA1937FD00009E4206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48C30CEB1937FD00009E4206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48C30CED1937FD00009E4206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NativeProjectLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativeProjectLib/NativeProjectLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		48C30CEE1937FD00009E4206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NativeProjectLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativeProjectLib/NativeProjectLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		48C30CF01937FD00009E4206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativeProjectLib/NativeProjectLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NativeProjectLibTests/NativeProjectLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		48C30CF11937FD00009E4206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NativeProjectLib/NativeProjectLib-Prefix.pch";
+				INFOPLIST_FILE = "NativeProjectLibTests/NativeProjectLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C30CC41937FD00009E4206 /* Build configuration list for PBXProject "NativeProjectLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30CEA1937FD00009E4206 /* Debug */,
+				48C30CEB1937FD00009E4206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C30CEC1937FD00009E4206 /* Build configuration list for PBXNativeTarget "NativeProjectLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30CED1937FD00009E4206 /* Debug */,
+				48C30CEE1937FD00009E4206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48C30CEF1937FD00009E4206 /* Build configuration list for PBXNativeTarget "NativeProjectLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C30CF01937FD00009E4206 /* Debug */,
+				48C30CF11937FD00009E4206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48C30CC11937FD00009E4206 /* Project object */;
+}

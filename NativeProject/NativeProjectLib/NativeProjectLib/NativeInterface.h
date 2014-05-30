@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIViewController.h>
 
 @interface NativeInterface : NSObject
+
++ (UIViewController*)Create;
 
 @end

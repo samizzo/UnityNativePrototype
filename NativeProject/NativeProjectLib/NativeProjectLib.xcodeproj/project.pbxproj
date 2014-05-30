@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48C30CCD1937FD00009E4206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CCC1937FD00009E4206 /* Foundation.framework */; };
-		48C30CD21937FD00009E4206 /* NativeProjectLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48C30CD11937FD00009E4206 /* NativeProjectLib.h */; };
-		48C30CD41937FD00009E4206 /* NativeProjectLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C30CD31937FD00009E4206 /* NativeProjectLib.m */; };
+		48C30CD21937FD00009E4206 /* NativeInterface.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48C30CD11937FD00009E4206 /* NativeInterface.h */; };
+		48C30CD41937FD00009E4206 /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C30CD31937FD00009E4206 /* NativeInterface.m */; };
 		48C30CDB1937FD00009E4206 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CDA1937FD00009E4206 /* XCTest.framework */; };
 		48C30CDC1937FD00009E4206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CCC1937FD00009E4206 /* Foundation.framework */; };
 		48C30CDE1937FD00009E4206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30CDD1937FD00009E4206 /* UIKit.framework */; };
@@ -35,7 +35,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				48C30CD21937FD00009E4206 /* NativeProjectLib.h in CopyFiles */,
+				48C30CD21937FD00009E4206 /* NativeInterface.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +45,15 @@
 		48C30CC91937FD00009E4206 /* libNativeProjectLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNativeProjectLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C30CCC1937FD00009E4206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48C30CD01937FD00009E4206 /* NativeProjectLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeProjectLib-Prefix.pch"; sourceTree = "<group>"; };
-		48C30CD11937FD00009E4206 /* NativeProjectLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeProjectLib.h; sourceTree = "<group>"; };
-		48C30CD31937FD00009E4206 /* NativeProjectLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeProjectLib.m; sourceTree = "<group>"; };
+		48C30CD11937FD00009E4206 /* NativeInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
+		48C30CD31937FD00009E4206 /* NativeInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
 		48C30CD91937FD00009E4206 /* NativeProjectLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeProjectLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C30CDA1937FD00009E4206 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		48C30CDD1937FD00009E4206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		48C30CE41937FD00009E4206 /* NativeProjectLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NativeProjectLibTests-Info.plist"; sourceTree = "<group>"; };
 		48C30CE61937FD00009E4206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48C30CE81937FD00009E4206 /* NativeProjectLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeProjectLibTests.m; sourceTree = "<group>"; };
+		48C30D4119381129009E4206 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +111,10 @@
 		48C30CCE1937FD00009E4206 /* NativeProjectLib */ = {
 			isa = PBXGroup;
 			children = (
-				48C30CD11937FD00009E4206 /* NativeProjectLib.h */,
-				48C30CD31937FD00009E4206 /* NativeProjectLib.m */,
+				48C30CD11937FD00009E4206 /* NativeInterface.h */,
+				48C30CD31937FD00009E4206 /* NativeInterface.m */,
 				48C30CCF1937FD00009E4206 /* Supporting Files */,
+				48C30D4119381129009E4206 /* TestView.xib */,
 			);
 			path = NativeProjectLib;
 			sourceTree = "<group>";
@@ -224,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C30CD41937FD00009E4206 /* NativeProjectLib.m in Sources */,
+				48C30CD41937FD00009E4206 /* NativeInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

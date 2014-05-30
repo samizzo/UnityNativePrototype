@@ -19,6 +19,7 @@
 		48C30D2319380EC9009E4206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30D0B19380EC9009E4206 /* UIKit.framework */; };
 		48C30D2B19380EC9009E4206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48C30D2919380EC9009E4206 /* InfoPlist.strings */; };
 		48C30D2D19380EC9009E4206 /* NativeProjectBootstrapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C30D2C19380EC9009E4206 /* NativeProjectBootstrapTests.m */; };
+		48C30D4019381046009E4206 /* libNativeProjectLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C30D3F19381046009E4206 /* libNativeProjectLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		48C30D2819380EC9009E4206 /* NativeProjectBootstrapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NativeProjectBootstrapTests-Info.plist"; sourceTree = "<group>"; };
 		48C30D2A19380EC9009E4206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48C30D2C19380EC9009E4206 /* NativeProjectBootstrapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeProjectBootstrapTests.m; sourceTree = "<group>"; };
+		48C30D3F19381046009E4206 /* libNativeProjectLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNativeProjectLib.a; path = "../../../../../Library/Developer/Xcode/DerivedData/NativeProject-bmjjvsxujjyzcoddtsdxvcazatha/Build/Products/Debug-iphoneos/libNativeProjectLib.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C30D4019381046009E4206 /* libNativeProjectLib.a in Frameworks */,
 				48C30D0A19380EC9009E4206 /* CoreGraphics.framework in Frameworks */,
 				48C30D0C19380EC9009E4206 /* UIKit.framework in Frameworks */,
 				48C30D0819380EC9009E4206 /* Foundation.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		48C30D0619380EC9009E4206 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48C30D3F19381046009E4206 /* libNativeProjectLib.a */,
 				48C30D0719380EC9009E4206 /* Foundation.framework */,
 				48C30D0919380EC9009E4206 /* CoreGraphics.framework */,
 				48C30D0B19380EC9009E4206 /* UIKit.framework */,
@@ -361,7 +365,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeProjectBootstrap/NativeProjectBootstrap-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "NativeProjectBootstrap/NativeProjectBootstrap-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NativeProject-bmjjvsxujjyzcoddtsdxvcazatha/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,7 +386,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeProjectBootstrap/NativeProjectBootstrap-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "NativeProjectBootstrap/NativeProjectBootstrap-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NativeProject-bmjjvsxujjyzcoddtsdxvcazatha/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

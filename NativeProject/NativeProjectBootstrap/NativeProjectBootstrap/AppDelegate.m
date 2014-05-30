@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <NativeProjectLib/NativeInterface.h>
 
 @implementation AppDelegate
 

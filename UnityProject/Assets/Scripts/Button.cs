@@ -11,6 +11,7 @@ public class Button : MonoBehaviour
 		if (GUI.Button(new Rect(Screen.width * 0.25f, Screen.height * 0.2f, Screen.width * 0.5f, 50), "Switch to native.."))
 		{
 			Debug.Log("Switching to native..");
+			UnityNativeInterface.SwitchToNative();
 		}
 	}
 }

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (unsafe_unretained, nonatomic) IBOutlet UIButton *SwitchToUnity;
+
+@property (weak, nonatomic) IBOutlet UIButton *SwitchToUnity;
 
 @end

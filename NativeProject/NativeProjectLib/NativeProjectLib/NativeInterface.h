@@ -16,5 +16,6 @@
 
 - (id)init;
 - (void)dealloc;
+- (void)removeView;
 
 @end

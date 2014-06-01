@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Fancy Pants Games. All rights reserved.
 //
 
+#import <UIKit/UIView.h>
 #import "NativeInterface.h"
 #import "ViewController.h"
 
@@ -17,7 +18,7 @@
     if (self != nil)
     {
         _Storyboard = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] retain];
-        _ViewController = [[_Storyboard instantiateViewControllerWithIdentifier:@"ViewController"] retain];
+        _ViewController = [[_Storyboard instantiateViewControllerWithIdentifier:@"NavController"] retain];
     }
 
     return self;
@@ -26,6 +27,11 @@
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (void)removeView
+{
+    [_ViewController.view removeFromSuperview];
 }
 
 @end

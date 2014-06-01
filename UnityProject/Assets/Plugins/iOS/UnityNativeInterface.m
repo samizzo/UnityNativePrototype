@@ -18,7 +18,6 @@ extern void		UnityPause(bool pause);
 
 @interface CustomAppController : UnityAppController
 {
-    UINavigationController* m_navController;
     UIViewController*       m_unityViewController;
     UIViewController*       m_nativeViewController;
     bool                    m_inNative;
@@ -42,11 +41,8 @@ extern void		UnityPause(bool pause);
     
 	_rootController.view = _rootView;
 
-	m_navController = [[UINavigationController alloc] initWithRootViewController:m_unityViewController];
-	[_rootView addSubview:m_navController.view];
-    
+    [_rootView addSubview:m_unityViewController.view];
     m_inNative = false;
-//    UnityPause(true);
 }
 
 - (void) switchToNative;
@@ -54,8 +50,8 @@ extern void		UnityPause(bool pause);
     if (!m_inNative)
     {
         NSLog(@"Switching to native");
-        //[m_navController popViewControllerAnimated:NO];
-        [m_navController pushViewController:m_nativeViewController animated:NO];
+        [m_unityViewController.view removeFromSuperview];
+        [_rootView addSubview:m_nativeViewController.view];
         m_inNative = true;
         UnityPause(true);
     }
@@ -70,8 +66,8 @@ extern void		UnityPause(bool pause);
     if (m_inNative)
     {
         m_inNative = false;
-        //[m_navController pushViewController:m_unityViewController animated:NO];
-        [m_navController popViewControllerAnimated:NO];
+        [m_nativeViewController.view removeFromSuperview];
+        [_rootView addSubview:m_unityViewController.view];
         UnityPause(false);
     }
 }

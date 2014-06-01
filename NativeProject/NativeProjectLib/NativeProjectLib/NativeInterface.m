@@ -11,11 +11,21 @@
 
 @implementation NativeInterface
 
-+ (UIViewController*)Create
+- (id)init
 {
-    UIStoryboard* storyboard = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] retain];
-    ViewController* viewController = [[storyboard instantiateViewControllerWithIdentifier:@"ViewController"] retain];
-    return viewController;
+    self = [super init];
+    if (self != nil)
+    {
+        _Storyboard = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] retain];
+        _ViewController = [[_Storyboard instantiateViewControllerWithIdentifier:@"ViewController"] retain];
+    }
+
+    return self;
+}
+
+- (void)dealloc
+{
+    [super dealloc];
 }
 
 @end

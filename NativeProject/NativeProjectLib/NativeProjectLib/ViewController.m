@@ -48,6 +48,7 @@
 - (IBAction)onSwitchToUnityPressed:(id)sender
 {
     NSLog(@"Switching to Unity..");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SwitchToUnityRequested" object:nil];
 }
 
 @end

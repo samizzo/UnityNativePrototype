@@ -338,6 +338,7 @@
 		48C30CED1937FD00009E4206 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NativeProjectLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -351,6 +352,7 @@
 		48C30CEE1937FD00009E4206 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NativeProjectLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

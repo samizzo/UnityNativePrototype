@@ -17,9 +17,15 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    UIViewController* viewController = [NativeInterface Create];
-    self.window.rootViewController = viewController;
+    NativeInterface* nativeInterface = [[NativeInterface alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(SwitchToUnityRequested) name:@"SwitchToUnityRequested" object:nil];
+    self.window.rootViewController = [nativeInterface ViewController];
     return YES;
+}
+
+- (void)SwitchToUnityRequested
+{
+    NSLog(@"Received notification SwitchToUnityRequsted");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

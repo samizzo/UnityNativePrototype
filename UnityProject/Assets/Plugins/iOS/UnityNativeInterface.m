@@ -19,7 +19,7 @@ extern void		UnityPause(bool pause);
 @interface CustomAppController : UnityAppController
 {
     UIViewController*       m_unityViewController;
-    UIViewController*       m_nativeViewController;
+    NativeInterface*        m_nativeInterface;
     bool                    m_inNative;
 }
 
@@ -34,15 +34,17 @@ extern void		UnityPause(bool pause);
     _rootController	= [[UnityDefaultViewController alloc] init];
     _rootView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    m_nativeViewController = [NativeInterface Create];
+    m_nativeInterface = [[NativeInterface alloc] init];
 
 	m_unityViewController = [[UIViewController alloc] init];
 	m_unityViewController.view = _unityView;
-    
+
 	_rootController.view = _rootView;
 
     [_rootView addSubview:m_unityViewController.view];
     m_inNative = false;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchToUnity) name:@"SwitchToUnityRequested" object:nil];
 }
 
 - (void) switchToNative;
@@ -51,7 +53,7 @@ extern void		UnityPause(bool pause);
     {
         NSLog(@"Switching to native");
         [m_unityViewController.view removeFromSuperview];
-        [_rootView addSubview:m_nativeViewController.view];
+        [_rootView addSubview:m_nativeInterface.ViewController.view];
         m_inNative = true;
         UnityPause(true);
     }
@@ -66,7 +68,7 @@ extern void		UnityPause(bool pause);
     if (m_inNative)
     {
         m_inNative = false;
-        [m_nativeViewController.view removeFromSuperview];
+        [m_nativeInterface removeView];
         [_rootView addSubview:m_unityViewController.view];
         UnityPause(false);
     }
@@ -84,7 +86,6 @@ extern "C"
     
     void SwitchToNative()
     {
-        NSLog(@"Hello from native!");
         CustomAppController* controller = (CustomAppController*)[UIApplication sharedApplication].delegate;
         [controller switchToNative];
     }

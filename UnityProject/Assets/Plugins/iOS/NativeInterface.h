@@ -11,6 +11,11 @@
 
 @interface NativeInterface : NSObject
 
-+ (UIViewController*)Create;
+@property (readonly) UIStoryboard* Storyboard;
+@property (readonly) UIViewController* ViewController;
+
+- (id)init;
+- (void)dealloc;
+- (void)removeView;
 
 @end

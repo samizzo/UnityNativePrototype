@@ -376,6 +376,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "NativeProjectBootstrap/NativeProjectBootstrap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NativeProject-bmjjvsxujjyzcoddtsdxvcazatha/Build/Products/Debug-iphoneos",
@@ -403,6 +404,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "NativeProjectBootstrap/NativeProjectBootstrap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NativeProject-bmjjvsxujjyzcoddtsdxvcazatha/Build/Products/Debug-iphoneos",

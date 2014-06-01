@@ -18,12 +18,12 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     NativeInterface* nativeInterface = [[NativeInterface alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(SwitchToUnityRequested) name:@"SwitchToUnityRequested" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchToUnityRequested) name:@"SwitchToUnityRequested" object:nil];
     self.window.rootViewController = [nativeInterface ViewController];
     return YES;
 }
 
-- (void)SwitchToUnityRequested
+- (void)switchToUnityRequested
 {
     NSLog(@"Received notification SwitchToUnityRequsted");
 }

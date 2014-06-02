@@ -17,7 +17,7 @@ The notification centre is used to signal when to switch back to Unity; however 
 
 ### NativeProjectBootstrap
 
-This is an iOS executable that provides a wrapper around the static library. This is not used in Unity, but using the bootstrap project means that the UI can be iterated on without requiring integration into Unity. The AppDelegate instantiates NativeInterface and sets its rootViewController to the NativeInterface ViewController, and also registers for the "SwitchToUnityRequested" notification message.
+This is an iOS executable that provides a wrapper around the static library. This is not used in Unity, but instead is used to allow iterating on the native UI without requiring integration into Unity. The AppDelegate instantiates NativeInterface and sets its rootViewController to the NativeInterface ViewController, and also registers for the "SwitchToUnityRequested" notification message.
 
 It is important to note that the -ObjC linker flag must be used to ensure that all Objective-C classes and categories are loaded when linking. Otherwise the linker may optimise out classes that are not referenced, causing runtime errors.
 
@@ -50,3 +50,16 @@ Note that if you wish to run the Unity project in the simulator, a couple of thi
 * In RegisterMonoModules.cpp, the definition of mono_dl_register_symbol should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
 * The call to mono_dl_register_symbol where it registers the SwitchToNative function should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
 
+## Workflow
+
+The person implementing the native UI can work in the NativeProject Xcode project. They can iterate on the native UI and build, run, and test within Xcode without touching Unity.
+
+The person implementing the Unity part can work in Unity solely on the Unity part.
+
+At some point updates will need to be integrated. To integrate, the following files from the static library should be copied into the Unity iOS plugin directory:
+
+* libNativeProjectLib.a
+* NativeInterface.h
+* Storyboard.storyboard (or any additional storyboard, XIB, etc files)
+
+Then the Unity project can be built out to Xcode as detailed above.

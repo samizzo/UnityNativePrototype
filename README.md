@@ -17,7 +17,7 @@ The notification centre is used to signal when to switch back to Unity; however 
 
 ### NativeProjectBootstrap
 
-This is an iOS executable that provides a wrapper around the static library. This is not used in Unuity, but using the bootstrap project means that the UI can be iterated on without requiring integration into Unity. The AppDelegate instantiates NativeInterface and sets its rootViewController to the NativeInterface ViewController, and also registers for the "SwitchToUnityRequested" notification message.
+This is an iOS executable that provides a wrapper around the static library. This is not used in Unity, but using the bootstrap project means that the UI can be iterated on without requiring integration into Unity. The AppDelegate instantiates NativeInterface and sets its rootViewController to the NativeInterface ViewController, and also registers for the "SwitchToUnityRequested" notification message.
 
 It is important to note that the -ObjC linker flag must be used to ensure that all Objective-C classes and categories are loaded when linking. Otherwise the linker may optimise out classes that are not referenced, causing runtime errors.
 

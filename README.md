@@ -63,3 +63,29 @@ At some point updates will need to be integrated. To integrate, the following fi
 * Storyboard.storyboard (or any additional storyboard, XIB, etc files)
 
 Then the Unity project can be built out to Xcode as detailed above.
+
+## Building from Unity
+
+To build the entire project out for running on a device:
+
+1. Start Unity.
+2. Load the Unity project.
+3. Bring up the Build Settings window (File->Build Settings).
+4. Switch platform to iOS
+5. Hit Build. Unity will ask where you would like to generate the project. Give it a folder name (it can be anything - let's assume "xcode").
+6. Once it has finished building, go into that folder and you should see an Xcode project. Load the project.
+7. Add the storyboard file Storyboard.storyboard to the project (it is in xcode/Libraries).
+8. Add the -ObjC flag to "Other linker flags" in Build Settings->Linking.
+9. Run the project.
+
+# Building for simulator
+
+1. In Unity, go to Edit->Project Settings->Player.
+2. Find the SDK Version setting and set it to "Simulator SDK".
+3. Rebuild the NativeProjectLib static library for simulator (instead of device).
+4. Copy the static library (libNativeProjectLib.a) into the Plugins/iOS directory in Unity.
+5. Build from Unity as detailed above.
+6. Before building or running in Xcode, make the following changes:
+   - In RegisterMonoModules.cpp, the definition of mono_dl_register_symbol should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
+   - In RegisterMonoModules.cpp, the call to mono_dl_register_symbol where it registers the SwitchToNative function should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
+7. Now you can build/run from Xcode.

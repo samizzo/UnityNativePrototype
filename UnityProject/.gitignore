@@ -9,7 +9,6 @@
 obj/
 *.app/
 xcode/
-android/
 *.apk
 UnityVS.meta
 UnityVS/

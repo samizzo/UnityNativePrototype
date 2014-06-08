@@ -4,9 +4,12 @@
 *.sln
 *.unityproj
 *.userprefs
+*.DotSettings
 *.DS_Store
 obj/
 *.app/
 xcode/
 android/
 *.apk
+UnityVS.meta
+UnityVS/

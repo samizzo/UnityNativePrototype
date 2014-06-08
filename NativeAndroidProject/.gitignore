@@ -1,0 +1,10 @@
+*.apk
+*.ap_
+*.dex
+*.class
+libs/
+bin/
+gen/
+proguard/
+local.properties
+

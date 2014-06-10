@@ -44,7 +44,7 @@ public class CustomNativeActivity extends UnityPlayerNativeActivity
 	{
 		mUnityPlayer.pause();
 		int id = getResources().getIdentifier("test_view", "layout", getPackageName());
-		setContentView(id); // R.layout.test_view
+		setContentView(id);
 	}
 	
 	private void switchToUnityImp()

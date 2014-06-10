@@ -116,7 +116,7 @@ To build the entire project out for running on a device:
 8. Add the -ObjC flag to "Other linker flags" in Build Settings->Linking.
 9. Run the project.
 
-# iOS - Building for simulator
+## iOS - Building for simulator
 
 1. In Unity, go to Edit->Project Settings->Player.
 2. Find the SDK Version setting and set it to "Simulator SDK".

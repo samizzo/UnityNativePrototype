@@ -30,7 +30,7 @@ It may also be necessary to use the -force_load or -all_load flags to work aroun
 
 ### NativeProjectLib
 
-This is an Android library. It has a single TableLayout with a button to switch back to Unity. It also has a custom native activity called CustomNativeActivity that derives from UnityPlayerNativeActivity in order to provide the interface to switch between native UI and Unity.
+This is an Android library. It has a single TableLayout with a button to switch back to Unity. It also has a custom native activity called CustomNativeActivity that derives from UnityPlayerNativeActivity in order to provide the interface to switch between native UI and Unity. This is only used by Unity and not by the bootstrap application.
 
 ### NativeProjectBootstrap
 

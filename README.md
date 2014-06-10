@@ -99,8 +99,8 @@ The person implementing the Unity part can work in Unity solely on the Unity par
 
 At some point updates will need to be integrated. To integrate, the following files from the Android library should be copied into the Unity Android plugin directory:
 
-* nativeprojectlib.jar into the bin directory
-* The entire res directory
+* nativeprojectlib.jar from NativeProjectLib/bin into the bin directory
+* The entire NativeProjectLib/res contents directory into the res directory
 
 ## iOS - Building from Unity
 

@@ -44,7 +44,7 @@ This is an Android executable that provides a wrapper around the library. This i
 
 ## UnityProject
 
-This is a sample Unity project that uses the libraries. In the project there is an iOS plugin (located in Assets/Plugins/iOS) that interfaces to the static library. There is also an Android plugin to interface with Android.
+This is a sample Unity project that uses the libraries. In the project there is an iOS plugin that interfaces to the static library located in Assets/Plugins/iOS. There is an Android plugin to interface with Android located in Assets/Plugins/Android.
 
 ### iOS integration
 

@@ -1,13 +1,16 @@
 # Overview
 
-This repository demonstrates how to integrate Unity with UIKit. It consists of two projects:
+This repository demonstrates how to integrate Unity with UIKit and the native Android UI. It consists of three projects:
 
 * UnityProject - a sample Unity project that renders some text and a button, and allows switching to the native view
 * NativeProject - an Xcode project that has two subprojects:
    * NativeProjectLib - a static iOS library that provides a sample native UI with a navigation controller and a button to switch back to Unity
    * NativeProjectBootstrap - an iOS app that links against the static library in order to allow iterating on the native UI
+* NativeAndroidProject - two Android projects:
+   * NativeProjectLib - an Android library that provides a sample native UI with a button to switch back to Unity
+   * NativeProjectBootstrap - an Android app that links against the Android library in order to allow iterating on the native UI
 
-## NativeProject
+## NativeProject (iOS)
 
 ### NativeProjectLib
 
@@ -23,9 +26,27 @@ It is important to note that the -ObjC linker flag must be used to ensure that a
 
 It may also be necessary to use the -force_load or -all_load flags to work around a linker bug when the static library contains only categories and no classes. See https://developer.apple.com/library/mac/qa/qa1490/_index.html for details.
 
+## NativeAndroidProject (Android)
+
+### NativeProjectLib
+
+This is an Android library. It has a single TableLayout with a button to switch back to Unity. It also has a custom native activity called CustomNativeActivity that derives from UnityPlayerNativeActivity in order to provide the interface to switch between native UI and Unity.
+
+### NativeProjectBootstrap
+
+This is an Android executable that provides a wrapper around the library. This is not used in Unity, but instead is used to allow iterating on the native UI without requiring integration into Unity.
+
+## Eclipse setup
+
+1. Import the NativeProjectLib, NativeProjectBootstrap, and appcompat projects into Eclipse (note: replace appcompat with the one that comes with your SDK if necessary).
+2. Ensure that the path to Unity's classes.jar is correct in NativeProjectLib (right-click NativeProjectLib->Properties->Java Build Path->Libraries).
+3. You should be able to run NativeProjectBootstrap.
+
 ## UnityProject
 
-This is a sample Unity project that uses the static library. In the project there is an iOS plugin (located in Assets/Plugins/iOS) that interfaces to the static library.
+This is a sample Unity project that uses the libraries. In the project there is an iOS plugin (located in Assets/Plugins/iOS) that interfaces to the static library. There is also an Android plugin to interface with Android.
+
+### iOS integration
 
 The static library is copied into the plugins directory, along with the public header (NativeInterface.h) and the Storyboard file. The storyboard or any XIB/NIB files *MUST* be placed in the Unity folder, because they are *NOT* built into the static library.
 
@@ -50,7 +71,13 @@ Note that if you wish to run the Unity project in the simulator, a couple of thi
 * In RegisterMonoModules.cpp, the definition of mono_dl_register_symbol should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
 * The call to mono_dl_register_symbol where it registers the SwitchToNative function should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
 
-## Workflow
+### Android integration
+
+The Android plugin contains an AndroidManifest.xml that specifies what activity to start when the application boots. It also contains all resources from the library, and a jar file containing the code from the library.
+
+The CustomNativeActivity in the jar file implements the interface that the C# code can call to.
+
+## iOS - Workflow
 
 The person implementing the native UI can work in the NativeProject Xcode project. They can iterate on the native UI and build, run, and test within Xcode without touching Unity.
 
@@ -64,7 +91,18 @@ At some point updates will need to be integrated. To integrate, the following fi
 
 Then the Unity project can be built out to Xcode as detailed above.
 
-## Building from Unity
+## Android - Workflow
+
+The person implementing the native UI can work in the NativeAndroidProject projects. They can iterate on the native UI and build, run, and test within Xcode without touching Unity.
+
+The person implementing the Unity part can work in Unity solely on the Unity part.
+
+At some point updates will need to be integrated. To integrate, the following files from the Android library should be copied into the Unity Android plugin directory:
+
+* nativeprojectlib.jar into the bin directory
+* The entire res directory
+
+## iOS - Building from Unity
 
 To build the entire project out for running on a device:
 
@@ -78,7 +116,7 @@ To build the entire project out for running on a device:
 8. Add the -ObjC flag to "Other linker flags" in Build Settings->Linking.
 9. Run the project.
 
-# Building for simulator
+# iOS - Building for simulator
 
 1. In Unity, go to Edit->Project Settings->Player.
 2. Find the SDK Version setting and set it to "Simulator SDK".
@@ -89,3 +127,14 @@ To build the entire project out for running on a device:
    - In RegisterMonoModules.cpp, the definition of mono_dl_register_symbol should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
    - In RegisterMonoModules.cpp, the call to mono_dl_register_symbol where it registers the SwitchToNative function should be moved out of the #if !(TARGET_IPHONE_SIMULATOR) block
 7. Now you can build/run from Xcode.
+
+## Android - Building from Unity
+
+To build the entire project out for running on a device:
+
+1. Start Unity.
+2. Load the Unity project.
+3. Bring up the Build Settings window (File->Build Settings).
+4. Switch platform to Android
+5. Hit Build or Build and Run.
+

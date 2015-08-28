@@ -13,7 +13,7 @@
 #import "UnityAppController.h"
 
 #ifndef __cplusplus
-extern void		UnityPause(bool pause);
+//extern void		UnityPause(bool pause);
 #endif
 
 @interface CustomAppController : UnityAppController
@@ -25,11 +25,10 @@ extern void		UnityPause(bool pause);
 
 - (void) switchToNative;
 - (void) switchToUnity;
-- (void) createViewHierarchyImpl;
 @end
 
 @implementation CustomAppController
-- (void) createViewHierarchyImpl;
+- (void)willStartWithViewController:(UIViewController*)controller;
 {
     _rootController	= [[UnityDefaultViewController alloc] init];
     _rootView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

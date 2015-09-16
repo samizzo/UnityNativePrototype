@@ -2,7 +2,7 @@
 
 This repository demonstrates how to integrate Unity with UIKit and the native Android UI. It consists of three projects:
 
-* UnityProject - a sample Unity project that renders some text and a button, and allows switching to the native view
+* UnityProject (upgraded and tested with version 5.1.3f1)- a sample Unity project that renders some text and a button, and allows switching to the native view
 * NativeProject - an Xcode project that has two subprojects:
    * NativeProjectLib - a static iOS library that provides a sample native UI with a navigation controller and a button to switch back to Unity
    * NativeProjectBootstrap - an iOS app that links against the static library in order to allow iterating on the native UI
@@ -59,8 +59,37 @@ switchToUnity is attached to the notification centre "SwitchToUnityRequested" me
 
 When building from Unity for iOS, after the Xcode project is generated and loaded, the following manual steps must be performed in Xcode:
 
-* Add the storyboard file to the project (it is copied by Unity into the Xcode project's "Libraries" directory but isn't added to the project)
+* Add the storyboard file to the project. You need to copy it from UnityProject's Plugins/iOS folder manually (preferably) to Libraries/Plugins/iOS of Xcode project.
 * Add the -ObjC flag to "Other linker flags" (and also possibly -force_load or -load_all as mentioned above)
+* Change the following lines in `UnityViewControllerBase.h` file from
+
+```
+    // this is helper to add proper rotation handling methods depending on ios version
+    extern "C" void AddViewControllerRotationHandling(Class class_, IMP willRotateToInterfaceOrientation, IMP didRotateFromInterfaceOrientation, IMP viewWillTransitionToSize);
+    extern "C" void AddViewControllerDefaultRotationHandling(Class class_);
+```
+
+to
+
+```
+    // this is helper to add proper rotation handling methods depending on ios version
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+        void AddViewControllerRotationHandling(Class class_, IMP willRotateToInterfaceOrientation, IMP didRotateFromInterfaceOrientation, IMP viewWillTransitionToSize);
+    #ifdef __cplusplus
+    }
+    #endif
+     
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+        void AddViewControllerDefaultRotationHandling(Class class_);
+    #ifdef __cplusplus
+    }
+    #endif
+
+```
 
 The project can then be built and run on a device.
 

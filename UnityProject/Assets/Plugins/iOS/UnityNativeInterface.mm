@@ -36,7 +36,7 @@
     m_nativeInterface = [[NativeInterface alloc] init];
 
 	m_unityViewController = [[UIViewController alloc] init];
-	m_unityViewController.view = _unityView;
+	m_unityViewController.view = (UIView*)_unityView;
 
 	_rootController.view = _rootView;
 

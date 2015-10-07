@@ -61,35 +61,6 @@ When building from Unity for iOS, after the Xcode project is generated and loade
 
 * Add the storyboard file to the project. You need to copy it from UnityProject's Plugins/iOS folder manually (preferably) to Libraries/Plugins/iOS of Xcode project.
 * Add the -ObjC flag to "Other linker flags" (and also possibly -force_load or -load_all as mentioned above)
-* Change the following lines in `UnityViewControllerBase.h` file from
-
-```
-    // this is helper to add proper rotation handling methods depending on ios version
-    extern "C" void AddViewControllerRotationHandling(Class class_, IMP willRotateToInterfaceOrientation, IMP didRotateFromInterfaceOrientation, IMP viewWillTransitionToSize);
-    extern "C" void AddViewControllerDefaultRotationHandling(Class class_);
-```
-
-to
-
-```
-    // this is helper to add proper rotation handling methods depending on ios version
-    #ifdef __cplusplus
-    extern "C" {
-    #endif
-        void AddViewControllerRotationHandling(Class class_, IMP willRotateToInterfaceOrientation, IMP didRotateFromInterfaceOrientation, IMP viewWillTransitionToSize);
-    #ifdef __cplusplus
-    }
-    #endif
-     
-    #ifdef __cplusplus
-    extern "C" {
-    #endif
-        void AddViewControllerDefaultRotationHandling(Class class_);
-    #ifdef __cplusplus
-    }
-    #endif
-
-```
 
 The project can then be built and run on a device.
 

@@ -2,7 +2,7 @@
 
 This repository demonstrates how to integrate Unity with UIKit and the native Android UI. It consists of three projects:
 
-* UnityProject (upgraded and tested with version 5.1.3f1)- a sample Unity project that renders some text and a button, and allows switching to the native view
+* UnityProject (upgraded and tested with version 5.2.1f1) - a sample Unity project that renders some text and a button, and allows switching to the native view
 * NativeProject - an Xcode project that has two subprojects:
    * NativeProjectLib - a static iOS library that provides a sample native UI with a navigation controller and a button to switch back to Unity
    * NativeProjectBootstrap - an iOS app that links against the static library in order to allow iterating on the native UI
